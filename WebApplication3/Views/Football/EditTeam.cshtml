@@ -1,0 +1,23 @@
+﻿<h1>Add your new team</h1>
+@model Team
+@using (Html.BeginForm("EditTeam", "Football", FormMethod.Post))
+{
+	<div>
+		<p>
+			@Html.LabelFor(x =>x.teamname)
+			@Html.TextBoxFor(x =>x.teamname)
+			@Html.ValidationMessageFor(x =>x.teamname)
+		</p>
+		<p>
+			@Html.LabelFor(x =>x.country)
+			@Html.TextBoxFor(x => x.country)
+			@Html.ValidationMessageFor(x => x.country)
+		</p>
+		<p>
+			@Html.LabelFor(x =>x.coach)
+			@Html.TextBoxFor(x =>x.coach)
+			@Html.ValidationMessageFor(x =>x.coach)
+		</p>
+		<p><input type="submit" value="save" class="btn btn-outline-success"></p>
+	</div>
+}

@@ -1,0 +1,10 @@
+﻿@model Team
+<ul>
+	<li>@Model.teamname</li>
+	<li>@Model.coach</li>
+	<li>@Model.country</li>
+</ul>
+
+//form
+<a asp-route-id="@Model.id" asp-action="Delete" class="btn btn-outline-danger">Delete</a>
+<a  asp-action="Index" class="btn btn-outline-danger">cancel</a>
